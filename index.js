@@ -267,17 +267,23 @@ app.post("/api/studios", async (req, res) => {
     const user = await requireAuth(req, res);
     if (!user) return;
 
-    const {
-      name,
-      category,
-      location,
-      image,
-      pricePerHour,
-      capacity,
-      description,
-      amenities,
-    } = req.body;
+   
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
     const price = Number(pricePerHour);
 
     const guestCapacity =
