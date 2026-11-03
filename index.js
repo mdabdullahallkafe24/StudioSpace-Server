@@ -268,22 +268,18 @@ app.post("/api/studios", async (req, res) => {
     if (!user) return;
 
    
+ const {
+      name,
+      category,
+      location,
+      image,
+      pricePerHour,
+      capacity,
+      description,
+      amenities,
+    } = req.body;
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
     const price = Number(pricePerHour);
 
     const guestCapacity =
