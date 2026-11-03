@@ -324,23 +324,22 @@ app.post("/api/studios", async (req, res) => {
       return sendError(res, "Invalid amenities.");
     }
 
-   
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    const studio = {
+      name: name.trim(),
+      category: category.trim(),
+      location: location.trim(),
+      image: typeof image === "string" ? image.trim() : "",
+      pricePerHour: price,
+      capacity: guestCapacity,
+      description: description.trim(),
+      amenities: Array.isArray(amenities) ? amenities : [],
+      hostId: user.id,
+      hostEmail: user.email,
+      hostName: user.name || "",
+      status: "active",
+      createdAt: new Date(),
+      updatedAt: new Date(),
+    };
 
     const result = await studioCollection.insertOne(studio);
 
