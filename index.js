@@ -144,14 +144,23 @@ function formatBooking(booking) {
   };
 }
 
-// Categories
-const categories = [
-  { slug: "photo-studio", name: "Photo Studios" },
-  { slug: "sound-stage", name: "Sound Stages" },
-  { slug: "podcast-room", name: "Podcast Rooms" },
-  { slug: "music-suite", name: "Music Suites" },
-  { slug: "art-workshop", name: "Art Workshops" },
-];
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 app.get("/api/categories", (req, res) => {
   return sendSuccess(res, categories, "Categories fetched.");
